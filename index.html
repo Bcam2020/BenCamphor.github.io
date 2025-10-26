@@ -1,20 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ben Camphor — Cyber Security Portfolio</title>
-  <meta name="description" content="Ben Camphor – Cyber Security | Sec+ (701), SC-900 | Blue-team, Network Security, SOC">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ben Camphor | Cyber Security Portfolio">
+  <title>Ben Camphor | Cyber Security Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self';">
+
+  <!-- Prevent caching issues -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 </head>
+
 <body>
   <header class="hero">
     <div class="wrap">
       <h1>Ben Camphor</h1>
-      <p class="tag">Cyber Security • Sec+ (701) • SC-900 • SOC & Network Security</p>
+      <p class="tag">Cyber Security Analyst | Ethical Hacking | Network Defence</p>
       <nav class="nav">
-        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#certs">Certifications</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -22,64 +33,80 @@
   </header>
 
   <main class="wrap">
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>I’m a cyber security practitioner focused on blue-team operations, network hardening, and security awareness tooling. Recent work includes an AI-enhanced phishing simulator and a password security trainer with breach checks.</p>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Final-year Cyber Security student at Manchester Metropolitan University, on track for First-Class Honours. Experienced in ethical hacking, network security, and incident response, with hands-on placement experience at Insight UK leading internal security initiatives.</p>
     </section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-
-      <article class="card">
-        <h3>Adaptive Phishing Training Simulator</h3>
-        <ul>
-          <li>Generates increasingly sophisticated phishing emails based on user behaviour.</li>
-          <li>Scoring, analytics and feedback loop for continuous improvement.</li>
-        </ul>
-        <p><a class="btn" href="#" target="_blank" rel="noopener">Code / Write-up</a></p>
-      </article>
-
-      <article class="card">
-        <h3>Multi-Site Network Security Remediation</h3>
-        <ul>
-          <li>Cisco ASA firewalls, segmented VLANs, NAT, ACLs, SSHv2 hardening.</li>
-          <li>Documented configs, diagrams and rollout plan.</li>
-        </ul>
-        <p><a class="btn" href="#" target="_blank" rel="noopener">Case Study</a></p>
-      </article>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Skills & Certs</h2>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
       <ul class="grid">
-        <li>Security+ (SY0-701)</li>
-        <li>SC-900</li>
-        <li>Splunk • Wireshark</li>
-        <li>Cisco ASA / IOS</li>
-        <li>Python • PowerShell</li>
-        <li>Git & GitHub</li>
+        <li><strong>Cybersecurity:</strong> ISO 27001, NIST, SIEM (Splunk, Sentinel)</li>
+        <li><strong>Pen Testing:</strong> Kali, Burp Suite, Wireshark, Snort</li>
+        <li><strong>Networking:</strong> VPNs, Firewalls, TCP/IP, AD</li>
+        <li><strong>Programming:</strong> Python, PowerShell, Java, Bash</li>
+        <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
+        <li><strong>AI & Automation:</strong> Phishing detection, HIBP API</li>
       </ul>
     </section>
 
-    <section id="experience" class="section">
-      <h2>Experience & Education</h2>
-      <p><strong>BSc (Hons) Cyber Security</strong> — Manchester Metropolitan University.</p>
-      <p>Hands-on work across SOC operations, incident response, and network security engineering.</p>
+    <!-- Certifications -->
+    <section id="certs">
+      <h2>Certifications</h2>
+      <div class="certs">
+        <div class="cert-card">
+          <img src="images/sc-900.png" alt="Microsoft SC-900 Certificate" loading="lazy" decoding="async">
+          <p><strong>Microsoft Certified:</strong> Security, Compliance &amp; Identity Fundamentals</p>
+        </div>
+        <div class="cert-card">
+          <img src="images/security-plus.png" alt="CompTIA Security+ Badge" loading="lazy" decoding="async">
+          <p><strong>CompTIA Security+ (SY0-701)</strong> – Valid 2025–2028</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="card">
+        <h3>AI-Enhanced Phishing Simulator</h3>
+        <p>Adaptive phishing simulation system using LSTM and GPT models to improve user awareness. Includes feedback loops and real-time scoring dashboards.</p>
+      </div>
+      <div class="card">
+        <h3>Password Security Training Game</h3>
+        <p>Interactive password strength analyser integrating Have I Been Pwned API with entropy-based evaluation and visual feedback.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p><strong>Cybersecurity Intern – Insight UK (2023–2024)</strong></p>
+      <ul>
+        <li>Led security community calls and implemented a new SharePoint architecture for CTO Office.</li>
+        <li>Enhanced internal governance and compliance documentation processes.</li>
+      </ul>
+      <p><strong>Events Manager – DNA Events (2021–Present)</strong></p>
+      <p>Led logistics, staff training, and safety for major UK events, demonstrating leadership and attention to detail.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:ben@camphorhealth.com">ben@camphorhealth.com</a></p>
-      <p>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/bencamphor</a></p>
+      <p>Email: <a href="mailto:bencamphor@outlook.com">bencamphor@outlook.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ben-camphor-98479a221" target="_blank" rel="noopener noreferrer">linkedin.com/in/ben-camphor-98479a221</a></p>
     </section>
   </main>
 
   <footer class="footer">
-    © <span id="y"></span> Ben Camphor
+    © <span id="year"></span> Ben Camphor — All Rights Reserved.
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
