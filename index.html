@@ -1,112 +1,146 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ben Camphor | Cyber Security Portfolio">
-  <title>Ben Camphor | Cyber Security Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ben Camphor — Cyber Security</title>
+  <meta name="description" content="Modern, minimal portfolio for Ben Camphor — cyber security, blue team, network defence, training tools.">
 
-  <!-- Security headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self';">
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Prevent caching issues -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <!-- Security headers (meta-based; GitHub Pages serves via HTTPS) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self';">
+
+  <!-- Progressive enhancement -->
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
-
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <h1>Ben Camphor</h1>
-      <p class="tag">Cyber Security Analyst | Ethical Hacking | Network Defence</p>
-      <nav class="nav">
-        <a href="#about">About</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Site Header / Brand -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <!-- Optional logo -->
+        <!-- <img src="images/logo.svg" alt="" /> -->
+        <span class="brand-word">BEN</span><span class="brand-accent">CAMPHOR</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#work">Work</a>
         <a href="#skills">Skills</a>
-        <a href="#certs">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn--ghost">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <p class="eyebrow reveal">Cyber Security · Blue Team · Network Defence</p>
+      <h1 class="headline reveal">Designing clear, secure experiences that feel fast and effortless.</h1>
+      <p class="lede reveal">Final-year cyber security specialist focused on incident response, network hardening, and human-centred security tooling.</p>
+      <div class="cta-wrap reveal">
+        <a class="btn" href="#work">View projects</a>
+        <a class="btn btn--ghost" href="CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Final-year Cyber Security student at Manchester Metropolitan University, on track for First-Class Honours. Experienced in ethical hacking, network security, and incident response, with hands-on placement experience at Insight UK leading internal security initiatives.</p>
+  <main id="main">
+
+    <!-- Featured Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <h2 class="section-title reveal">Selected work</h2>
+
+        <div class="grid cards">
+          <article class="card reveal">
+            <div class="card-tag">Training</div>
+            <h3 class="card-title">Adaptive Phishing Simulator</h3>
+            <p class="card-text">Motion-guided flows with adaptive difficulty and concise user feedback. Dashboard for outcomes and trends.</p>
+            <div class="card-actions">
+              <a class="btn btn--text" href="projects/phishing-simulator.html">Case study →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-tag">Awareness</div>
+            <h3 class="card-title">Password Security Trainer</h3>
+            <p class="card-text">Entropy-based scoring, HIBP checks and micro-interactions that teach without nagging.</p>
+            <div class="card-actions">
+              <a class="btn btn--text" href="projects/password-trainer.html">Case study →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-tag">Network</div>
+            <h3 class="card-title">Multi-Site Network Remediation</h3>
+            <p class="card-text">ASA firewalls, segmented VLANs, SSH hardening and clear runbooks for roll-out.</p>
+            <div class="card-actions">
+              <a class="btn btn--text" href="#">Summary →</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="grid">
-        <li><strong>Cybersecurity:</strong> ISO 27001, NIST, SIEM (Splunk, Sentinel)</li>
-        <li><strong>Pen Testing:</strong> Kali, Burp Suite, Wireshark, Snort</li>
-        <li><strong>Networking:</strong> VPNs, Firewalls, TCP/IP, AD</li>
-        <li><strong>Programming:</strong> Python, PowerShell, Java, Bash</li>
-        <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
-        <li><strong>AI & Automation:</strong> Phishing detection, HIBP API</li>
-      </ul>
-    </section>
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
 
-    <!-- Certifications -->
-    <section id="certs">
-      <h2>Certifications</h2>
-      <div class="certs">
-        <div class="cert-card">
-          <img src="images/sc-900.png" alt="Microsoft SC-900 Certificate" loading="lazy" decoding="async">
-          <p><strong>Microsoft Certified:</strong> Security, Compliance &amp; Identity Fundamentals</p>
-        </div>
-        <div class="cert-card">
-          <img src="images/security-plus.png" alt="CompTIA Security+ Badge" loading="lazy" decoding="async">
-          <p><strong>CompTIA Security+ (SY0-701)</strong> – Valid 2025–2028</p>
+        <ul class="pill-cloud reveal" role="list">
+          <li>Security+ (SY0-701)</li><li>SC-900</li><li>Splunk</li><li>Wireshark</li>
+          <li>ASA / IOS</li><li>Python</li><li>PowerShell</li><li>Burp Suite</li>
+          <li>Kali</li><li>Snort</li><li>ISO 27001</li><li>NIST</li>
+        </ul>
+
+        <div class="certs reveal">
+          <figure class="cert">
+            <img src="images/sc-900.png" alt="Microsoft SC-900 Certificate" loading="lazy" decoding="async">
+            <figcaption>Microsoft SC-900</figcaption>
+          </figure>
+          <figure class="cert">
+            <img src="images/security-plus.png" alt="CompTIA Security+ (SY0-701) Certificate" loading="lazy" decoding="async">
+            <figcaption>CompTIA Security+ (SY0-701)</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Highlighted Projects</h2>
-      <div class="card">
-        <h3>AI-Enhanced Phishing Simulator</h3>
-        <p>Adaptive phishing simulation system using LSTM and GPT models to improve user awareness. Includes feedback loops and real-time scoring dashboards.</p>
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About</h2>
+        <p class="measure reveal">
+          I’m a final-year Cyber Security student at Manchester Metropolitan University on track for First-Class Honours, with a year in industry at Insight UK. I focus on clear documentation, reproducible configs, and UX-driven security tools that actually get used.
+        </p>
       </div>
-      <div class="card">
-        <h3>Password Security Training Game</h3>
-        <p>Interactive password strength analyser integrating Have I Been Pwned API with entropy-based evaluation and visual feedback.</p>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <p><strong>Cybersecurity Intern – Insight UK (2023–2024)</strong></p>
-      <ul>
-        <li>Led security community calls and implemented a new SharePoint architecture for CTO Office.</li>
-        <li>Enhanced internal governance and compliance documentation processes.</li>
-      </ul>
-      <p><strong>Events Manager – DNA Events (2021–Present)</strong></p>
-      <p>Led logistics, staff training, and safety for major UK events, demonstrating leadership and attention to detail.</p>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:bencamphor@outlook.com">bencamphor@outlook.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ben-camphor-98479a221" target="_blank" rel="noopener noreferrer">linkedin.com/in/ben-camphor-98479a221</a></p>
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
+        <div class="contact-card reveal">
+          <p>Email: <a href="mailto:bencamphor@outlook.com">bencamphor@outlook.com</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/ben-camphor-98479a221" target="_blank" rel="noopener">linkedin.com/in/ben-camphor-98479a221</a></p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    © <span id="year"></span> Ben Camphor — All Rights Reserved.
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ben Camphor</p>
+    </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
