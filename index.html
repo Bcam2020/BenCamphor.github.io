@@ -18,19 +18,27 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Scroll progress bar -->
+  <div class="scrollbar" aria-hidden="true"></div>
+
   <!-- Site Header / Brand -->
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/">
+      <a class="brand" href="#">
         <span class="brand-word">BEN</span><span class="brand-accent">CAMPHOR</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary">
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact" class="btn btn--ghost">Contact</a>
       </nav>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+      </button>
     </div>
   </header>
 
@@ -59,27 +67,18 @@
             <div class="card-tag">Training</div>
             <h3 class="card-title">Adaptive Phishing Simulator</h3>
             <p class="card-text">AI-driven phishing simulation that adapts to user behaviour, delivering targeted awareness training and real-time metrics.</p>
-            <div class="card-actions">
-              <a class="btn btn--text" href="projects/phishing-simulator.html">Case study →</a>
-            </div>
           </article>
 
           <article class="card reveal">
             <div class="card-tag">Awareness</div>
             <h3 class="card-title">Password Security Trainer</h3>
             <p class="card-text">Interactive password analysis tool integrating entropy scoring and breach detection using the Have I Been Pwned API.</p>
-            <div class="card-actions">
-              <a class="btn btn--text" href="projects/password-trainer.html">Case study →</a>
-            </div>
           </article>
 
           <article class="card reveal">
             <div class="card-tag">Network</div>
             <h3 class="card-title">Multi-Site Network Remediation</h3>
             <p class="card-text">Deployment of Cisco ASA firewalls, VLAN segmentation, and SSH hardening to strengthen enterprise infrastructure.</p>
-            <div class="card-actions">
-              <a class="btn btn--text" href="#">Summary →</a>
-            </div>
           </article>
         </div>
       </div>
