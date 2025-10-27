@@ -120,7 +120,7 @@ a:hover{opacity:.9}
   .nav-toggle[aria-expanded="true"] .nav-toggle__bar::after{ transform:rotate(-45deg); top:0 }
 }
 
-/* ====== Hero (Apple/OVA styling) ====== */
+/* ====== Hero ====== */
 .hero{
   position:relative; isolation:isolate; padding-block:4rem; text-align:center; overflow:hidden;
   background:radial-gradient(circle at 50% 30%, #101624, #0b0e13 80%);
@@ -249,16 +249,12 @@ a:hover{opacity:.9}
 }
 
 /* ====== Responsive Breakpoints ====== */
-
-/* Tablets (≤900px) */
 @media (max-width:900px){
   .container{ padding-inline:1rem }
   .primary-nav{ gap:.5rem }
   .section{ padding-block:3rem }
   .headline{ font-size:clamp(1.6rem, 2vw + 1rem, 2.2rem) }
 }
-
-/* Phones (≤600px) */
 @media (max-width:600px){
   .site-header .container{ flex-direction:column; gap:.5rem }
   .primary-nav{ flex-wrap:wrap; justify-content:center }
@@ -272,40 +268,39 @@ a:hover{opacity:.9}
 }
 
 /* ====== Education (spacing + rhythm) ====== */
-.cards--education {
-  gap: 2rem;                /* wider gaps than default cards */
-}
-.cards--education .card {
-  padding: 1.75rem 2rem;    /* a little more air */
-}
-.card-title {
-  margin: .25rem 0 .85rem;  /* clearer title/body separation */
-  line-height: 1.2;
-}
-.card-list {
-  list-style: disc inside;
-  margin: .25rem 0 0;
-  padding: 0;
-}
-.card-list li {
-  margin: .6rem 0;
-  line-height: 1.55;
-}
-.card-text {
-  margin: .35rem 0 0;
-  line-height: 1.6;
-}
-.card-text.muted { 
-  opacity: .82;
-}
-.card-sep {
-  border: 0;
-  border-top: 1px solid rgba(255,255,255,.08);
-  margin: 1rem 0 1.1rem;
-}
-/* Slightly looser layout on wider screens */
+.cards--education { gap: 2rem; }
+.cards--education .card { padding: 1.75rem 2rem; }
+.card-title { margin: .25rem 0 .85rem; line-height: 1.2; }
+.card-list { list-style: disc inside; margin: .25rem 0 0; padding: 0; }
+.card-list li { margin: .6rem 0; line-height: 1.55; }
+.card-text { margin: .35rem 0 0; line-height: 1.6; }
+.card-text.muted { opacity: .82; }
+.card-sep { border: 0; border-top: 1px solid rgba(255,255,255,.08); margin: 1rem 0 1.1rem; }
 @media (min-width: 1000px){
   .cards--education { gap: 2.25rem; }
   .cards--education .card { padding: 2rem 2.25rem; }
   .card-list li { margin: .7rem 0; }
 }
+
+/* ====== Experience (scoped polish) ====== */
+#experience .cards--education .card { /* reuse same grid but with subtle emphasis */
+  border-color: color-mix(in srgb, var(--line) 75%, transparent);
+}
+#experience .card-title {
+  letter-spacing:.01em;
+}
+#experience .card-text {
+  line-height: 1.65;
+}
+
+/* ====== Recommendations (testimonials style) ====== */
+#recommendations .card-text {
+  font-style: italic;
+  line-height: 1.7;
+}
+#recommendations .card-title {
+  font-weight: 700;
+}
+
+/* ====== Tiny utility (optional) ====== */
+.muted { opacity:.82; }

@@ -10,34 +10,30 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Security headers (strict CSP; no inline scripts/styles) -->
+  <!-- Security headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self';">
 
-  <!-- Progressive enhancement -->
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <!-- Scroll progress bar -->
   <div class="scrollbar" aria-hidden="true"></div>
 
-  <!-- Site Header / Brand -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#home" aria-label="Ben Camphor — Home">
         <span class="brand-word">BEN</span><span class="brand-accent">CAMPHOR</span>
       </a>
-
       <nav class="primary-nav" id="primaryNav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#recommendations">Recommendations</a>
         <a href="#contact" class="btn btn--ghost">Contact</a>
       </nav>
-
-      <!-- Mobile menu toggle -->
       <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
         <span class="nav-toggle__bar"></span>
       </button>
@@ -83,7 +79,6 @@
             <p class="card-text">Hardened enterprise infrastructure with Cisco ASA firewalls, VLAN segmentation, secure remote access, and SSH best-practice configuration.</p>
           </article>
 
-          <!-- IoT Forensics -->
           <article class="card reveal">
             <div class="card-tag">IoT Forensics</div>
             <h3 class="card-title">Meta Quest 2 Investigation</h3>
@@ -92,12 +87,11 @@
             </p>
           </article>
 
-          <!-- LLM Security SLR -->
           <article class="card reveal">
             <div class="card-tag">Research</div>
-            <h3 class="card-title">LLM Security SLR</h3>
+            <h3 class="card-title">LLM Security SLR — 81%</h3>
             <p class="card-text">
-              Systematic literature review on security and privacy vulnerabilities in Large Language Models. Analysed 80+ papers covering adversarial attacks, data leakage, bias, poisoning, and misuse, with mitigation strategies such as differential privacy, adversarial training, watermarking, and content governance.
+              Systematic literature review on vulnerabilities in Large Language Models, analysing 80+ studies covering adversarial attacks, data leakage, bias, and model misuse. Explored mitigation strategies including differential privacy, adversarial training, watermarking, and policy-based model governance.
             </p>
           </article>
         </div>
@@ -108,7 +102,6 @@
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section-title reveal">Skills</h2>
-
         <ul class="pill-cloud reveal" role="list">
           <li>Active Directory</li><li>CyberArk</li><li>Op24</li>
           <li>Security+ (SY0-701)</li><li>SC-900</li><li>Splunk</li>
@@ -138,7 +131,7 @@
           I’m a Cyber Security Analyst focused on strengthening enterprise identity and infrastructure controls. Day-to-day, I support and secure <strong>Active Directory</strong> estates, manage <strong>privileged access</strong> with CyberArk, and help teams embed defence-in-depth across critical services.
         </p>
         <p class="measure reveal">
-          I hold a <strong>First-Class Honours degree in Cyber Security</strong> and maintain <strong>active security clearance</strong>. My approach pairs technical precision with clear communication and user-centred thinking so security improves outcomes rather than getting in the way.
+          I hold a <strong>First-Class Honours degree in Cyber Security</strong> and maintain <strong>active security clearance</strong>. My approach combines technical precision with clear communication and user-centred thinking, ensuring security enhances rather than hinders business outcomes.
         </p>
       </div>
     </section>
@@ -149,7 +142,6 @@
         <h2 class="section-title reveal">Education</h2>
 
         <div class="grid cards cards--education">
-          <!-- Degree -->
           <article class="card reveal">
             <div class="card-tag">Degree</div>
             <h3 class="card-title">BSc (Hons) Cyber Security — First Class</h3>
@@ -159,7 +151,6 @@
             </p>
           </article>
 
-          <!-- Highlights -->
           <article class="card reveal">
             <div class="card-tag">Highlights</div>
             <ul class="card-list">
@@ -171,7 +162,6 @@
             </ul>
           </article>
 
-          <!-- Additional modules -->
           <article class="card reveal">
             <div class="card-tag">Additional Modules</div>
             <p class="card-text">
@@ -180,6 +170,67 @@
             <hr class="card-sep" aria-hidden="true">
             <p class="card-text muted">
               <strong>Foundation:</strong> Programming (87%), Databases (68%), Security Fundamentals (69%), Forensics Fundamentals (52%), Mathematics (58%), Operating Systems (49%), Cyber Security Governance (56%), Team Projects (68%).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+
+      <div class="grid cards cards--education">
+        <article class="card reveal">
+          <div class="card-tag">Current</div>
+          <h3 class="card-title">Information Security Analyst — Capgemini</h3>
+          <p class="card-text">
+            Supporting enterprise-scale security operations within a high-assurance environment. 
+            Focused on <strong>identity governance</strong>, <strong>infrastructure hardening</strong>, and <strong>compliance alignment</strong> 
+            while collaborating with cross-functional teams to strengthen security posture and incident response processes.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-tag">Placement</div>
+          <h3 class="card-title">Cyber Security Intern — Insight Enterprises</h3>
+          <p class="card-text">
+            Worked under the <strong>CISO EMEA</strong> and <strong>Head of Architecture &amp; Governance</strong> on global transformation initiatives. 
+            Contributed to the creation of a <strong>digital forensics capability</strong>, assisted in SOC development, and led an <strong>EMEA-wide documentation migration project</strong>. 
+            Appointed <strong>Security Community Lead</strong> to organise knowledge-sharing sessions with vendors and internal experts.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Recommendations -->
+    <section class="section" id="recommendations">
+      <div class="container">
+        <h2 class="section-title reveal">Recommendations</h2>
+
+        <div class="grid cards cards--education">
+          <article class="card reveal">
+            <div class="card-tag">Leadership · Insight</div>
+            <h3 class="card-title">Rob O’Connor</h3>
+            <p class="card-text">
+              <strong>Technology Lead &amp; CISO (EMEA), Insight</strong><br>
+              “Ben has been a pleasure to work with during his placement year at Insight. He is always enthusiastic, keen to learn, and has a positive outlook which is an asset to his team. 
+              Ben contributed to the development of a new digital forensics offering, supported SOC build activities, and led a major transformation project to migrate documentation across EMEA. 
+              His initiative, organisation, and professionalism made a real impact.”
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-tag">Management · Insight</div>
+            <h3 class="card-title">Vladimir Stojanovic</h3>
+            <p class="card-text">
+              <strong>Head of Architecture &amp; Governance, Insight</strong><br>
+              “I had the pleasure of managing Ben during his time at Insight. Ben consistently demonstrated a positive attitude, strong work ethic, and attention to detail. 
+              He led a large portfolio documentation migration project requiring coordination, security control alignment, and quality assurance. 
+              Ben was a valuable asset to our team and I would highly recommend him for future opportunities.”
             </p>
           </article>
         </div>
@@ -205,7 +256,6 @@
     </div>
   </footer>
 
-  <!-- JS (CSP-safe) -->
   <script src="script.js"></script>
 </body>
 </html>
