@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ben Camphor — Cyber Security</title>
   <meta name="description" content="Professional portfolio of Ben Camphor — Cyber Security Analyst specialising in identity management, privileged access, and enterprise infrastructure defence. Security-cleared; First-Class Honours in Cyber Security.">
+  <meta name="theme-color" content="#0b0e13">
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Security headers -->
+  <!-- Security headers (strict CSP; no inline scripts/styles) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self';">
 
-  <!-- Progressive enhancement -->
+  <!-- Progressive enhancement (keeps reveal visible if JS is off) -->
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -24,7 +25,7 @@
   <!-- Site Header / Brand -->
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#">
+      <a class="brand" href="#home" aria-label="Ben Camphor — Home">
         <span class="brand-word">BEN</span><span class="brand-accent">CAMPHOR</span>
       </a>
 
@@ -81,6 +82,15 @@
             <h3 class="card-title">Multi-Site Network Remediation</h3>
             <p class="card-text">Hardened enterprise infrastructure with Cisco ASA firewalls, VLAN segmentation, secure remote access, and SSH best-practice configuration.</p>
           </article>
+
+          <!-- NEW: IoT Forensics Project -->
+          <article class="card reveal">
+            <div class="card-tag">IoT Forensics</div>
+            <h3 class="card-title">Meta Quest 2 Investigation</h3>
+            <p class="card-text">
+              Forensic and security assessment of the Meta Quest 2 VR headset. Applied <strong>STRIDE</strong> and <strong>LINDDUN</strong> threat modelling; captured and analysed traffic with <strong>Wireshark</strong> and <strong>Ettercap</strong>; performed device imaging via <strong>ADB</strong>. Produced actionable recommendations for IoT privacy and defence.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -124,51 +134,48 @@
       </div>
     </section>
 
-  <!-- Education -->
-  <section class="section" id="education">
-    <div class="container">
-      <h2 class="section-title reveal">Education</h2>
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
 
-      <div class="grid cards cards--education">
+        <div class="grid cards cards--education">
+          <!-- Degree -->
+          <article class="card reveal">
+            <div class="card-tag">Degree</div>
+            <h3 class="card-title">BSc (Hons) Cyber Security — First Class</h3>
+            <p class="card-text">
+              <strong>Manchester Metropolitan University</strong><br>
+              Awarded First-Class Honours. Focus on blue-team defence, identity and infrastructure security, and applied research.
+            </p>
+          </article>
 
-        <!-- Degree -->
-        <article class="card reveal">
-          <div class="card-tag">Degree</div>
-          <h3 class="card-title">BSc (Hons) Cyber Security — First Class</h3>
-          <p class="card-text">
-            <strong>Manchester Metropolitan University</strong><br>
-            Awarded First-Class Honours. Focus on blue-team defence, identity and infrastructure security, and applied research.
-          </p>
-        </article>
+          <!-- Highlights -->
+          <article class="card reveal">
+            <div class="card-tag">Highlights</div>
+            <ul class="card-list">
+              <li><strong>Incident Response (92%)</strong> — authored playbooks for detection, containment, and recovery.</li>
+              <li><strong>Synoptic Project (87%)</strong> — AI-enhanced phishing &amp; password-security training simulator.</li>
+              <li><strong>Network Security (76%)</strong> — secure multi-site architecture with Cisco ASA, VLANs, ACLs.</li>
+              <li><strong>Applied Cryptography (74%)</strong> — encryption, key exchange, secure comms.</li>
+              <li><strong>Ethical Hacking (75%)</strong> — pentesting with Kali, Burp Suite, Wireshark.</li>
+            </ul>
+          </article>
 
-        <!-- Highlights -->
-        <article class="card reveal">
-          <div class="card-tag">Highlights</div>
-          <ul class="card-list">
-            <li><strong>Incident Response (92%)</strong> — authored playbooks for detection, containment, and recovery.</li>
-            <li><strong>Synoptic Project (87%)</strong> — AI-enhanced phishing & password-security training simulator.</li>
-            <li><strong>Network Security (76%)</strong> — secure multi-site architecture with Cisco ASA, VLANs, ACLs.</li>
-            <li><strong>Applied Cryptography (74%)</strong> — encryption, key exchange, secure comms.</li>
-            <li><strong>Ethical Hacking (75%)</strong> — pentesting with Kali, Burp Suite, Wireshark.</li>
-          </ul>
-        </article>
-
-        <!-- Additional modules -->
-        <article class="card reveal">
-          <div class="card-tag">Additional Modules</div>
-          <p class="card-text">
-            Mobile Computing (80%) · Emerging Issues in Security, Privacy &amp; Forensics (81%) · Research Methods (72%) · Industrial Placement (100%)
-          </p>
-          <hr class="card-sep" aria-hidden="true">
-          <p class="card-text muted">
-            <strong>Foundation:</strong> Programming (87%), Databases (68%), Security Fundamentals (69%), Forensics Fundamentals (52%), Mathematics (58%), Operating Systems (49%), Cyber Security Governance (56%), Team Projects (68%).
-          </p>
-        </article>
-
+          <!-- Additional modules -->
+          <article class="card reveal">
+            <div class="card-tag">Additional Modules</div>
+            <p class="card-text">
+              Mobile Computing (80%) · Emerging Issues in Security, Privacy &amp; Forensics (81%) · Research Methods (72%) · Industrial Placement (100%)
+            </p>
+            <hr class="card-sep" aria-hidden="true">
+            <p class="card-text muted">
+              <strong>Foundation:</strong> Programming (87%), Databases (68%), Security Fundamentals (69%), Forensics Fundamentals (52%), Mathematics (58%), Operating Systems (49%), Cyber Security Governance (56%), Team Projects (68%).
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-
+    </section>
 
     <!-- Contact -->
     <section class="section" id="contact">
@@ -189,6 +196,7 @@
     </div>
   </footer>
 
+  <!-- JS (CSP-safe) -->
   <script src="script.js"></script>
 </body>
 </html>
