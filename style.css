@@ -270,3 +270,42 @@ a:hover{opacity:.9}
   .cert{ max-width:90% }
   .contact-card{ width:90% }
 }
+
+/* ====== Education (spacing + rhythm) ====== */
+.cards--education {
+  gap: 2rem;                /* wider gaps than default cards */
+}
+.cards--education .card {
+  padding: 1.75rem 2rem;    /* a little more air */
+}
+.card-title {
+  margin: .25rem 0 .85rem;  /* clearer title/body separation */
+  line-height: 1.2;
+}
+.card-list {
+  list-style: disc inside;
+  margin: .25rem 0 0;
+  padding: 0;
+}
+.card-list li {
+  margin: .6rem 0;
+  line-height: 1.55;
+}
+.card-text {
+  margin: .35rem 0 0;
+  line-height: 1.6;
+}
+.card-text.muted { 
+  opacity: .82;
+}
+.card-sep {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin: 1rem 0 1.1rem;
+}
+/* Slightly looser layout on wider screens */
+@media (min-width: 1000px){
+  .cards--education { gap: 2.25rem; }
+  .cards--education .card { padding: 2rem 2.25rem; }
+  .card-list li { margin: .7rem 0; }
+}
