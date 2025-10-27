@@ -1,4 +1,10 @@
-// 1) Reveal on scroll (keeps your existing behaviour)
+// 0) Footer year (avoids inline script blocked by CSP)
+(() => {
+  const yEl = document.getElementById('y');
+  if (yEl) yEl.textContent = new Date().getFullYear();
+})();
+
+// 1) Reveal on scroll
 (() => {
   const items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || items.length === 0) {
@@ -31,10 +37,12 @@
   addEventListener('resize', onScroll);
 })();
 
-// 3) Subtle parallax for hero background
+// 3) Subtle parallax for hero background (respects reduced motion)
 (() => {
   const hero = document.querySelector('.hero');
   if (!hero) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
   addEventListener('scroll', () => {
     const offset = window.scrollY * 0.2;
     hero.style.backgroundPositionY = `${offset}px`;
